@@ -1,0 +1,250 @@
+/*==========================================
+=            Root Variables                =
+==========================================*/
+:root {
+  /* Primary Colors */
+  --color-fire:        #FF4500;  /* Intense OrangeRed */
+  --color-starlight:   #4CAF50;  /* Bold Green-Blue */
+  --color-bg-dark:     #0A0A1F;  /* Coal black-blue */
+  --color-bg-dark-2:   #16213E;  /* Deep midnight */
+  --color-fg-light:    #E0E7FF;  /* Soft off-white */
+  --color-accent-a:    rgba(100, 181, 246, 0.5);
+  --color-accent-b:    rgba(255, 87, 34, 0.5);
+
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+
+  /* Spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+
+/*==========================================
+=            Global Resets                =
+==========================================*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-fg-light);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-dark) 0%,
+    var(--color-bg-dark-2) 50%,
+    var(--color-bg-dark) 100%
+  );
+  background-image:
+    radial-gradient(circle at top left, var(--color-accent-a) 0%, transparent 30%),
+    radial-gradient(circle at bottom right, var(--color-accent-b) 0%, transparent 30%);
+  background-attachment: fixed;
+}
+
+/*==========================================
+=            Layout Helpers               =
+==========================================*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+section,
+aside {
+  margin-bottom: var(--space-xl);
+}
+
+/*==========================================
+=            Header & Nav                 =
+==========================================*/
+.header-footer-bg {
+  background-color: rgba(15, 25, 40, 0.95);
+  border-image: linear-gradient(
+    to right,
+    var(--color-accent-a) 0%,
+    transparent 20%,
+    transparent 80%,
+    var(--color-accent-b) 100%
+  ) 1;
+}
+
+nav {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav .btn-primary {
+  background-image: linear-gradient(to right, var(--color-fire), #E64A19);
+  color: #fff;
+}
+
+nav .btn-secondary {
+  border: 1px solid var(--color-starlight);
+  color: var(--color-starlight);
+}
+
+/*==========================================
+=            Card Component               =
+==========================================*/
+.card {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.8);
+}
+
+/*==========================================
+=            Button Styles                =
+==========================================*/
+.btn-primary {
+  display: inline-block;
+  background-image: linear-gradient(to right, var(--color-fire), #E64A19);
+  color: #fff;
+  font-weight: 700;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.3);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-starlight);
+  border: 1px solid var(--color-starlight);
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(76, 175, 80, 0.1);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+/*==========================================
+=       Text & Icon Utility Classes       =
+==========================================*/
+.text-fire {
+  color: var(--color-fire);
+}
+
+.text-starlight {
+  color: var(--color-starlight);
+}
+
+.glow-text {
+  text-shadow:
+    0 0 5px rgba(255, 69, 0, 0.8),
+    0 0 10px rgba(255, 69, 0, 0.6),
+    0 0 15px rgba(255, 69, 0, 0.4);
+}
+
+.glow-starlight-text {
+  text-shadow:
+    0 0 8px rgba(76, 175, 80, 0.9),
+    0 0 15px rgba(76, 175, 80, 0.7),
+    0 0 25px rgba(76, 175, 80, 0.5);
+}
+
+.icon,
+.icon-starlight {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.icon {
+  filter: drop-shadow(0 0 2px rgba(255, 69, 0, 0.8));
+}
+
+.icon-starlight {
+  filter: drop-shadow(0 0 2px rgba(76, 175, 80, 0.8));
+}
+
+/*==========================================
+=           Progress Bar                  =
+==========================================*/
+.progress-bar {
+  background-color: #374151;
+  border-radius: 9999px;
+  overflow: hidden;
+  height: 0.5rem;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--color-starlight), var(--color-fire));
+  border-radius: 9999px;
+  box-shadow:
+    0 0 8px rgba(255, 69, 0, 0.5),
+    0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+/*==========================================
+=           Form Controls                 =
+==========================================*/
+.input-text-area {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-fg-light);
+  padding: var(--space-md);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-text-area:focus {
+  outline: none;
+  border-color: var(--color-starlight);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
