@@ -3,75 +3,648 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinton Serio - Blessing Week: Day 6</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Clinton Serio – Blessing Week: Day 6</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Sacred CSS -->
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+        /* CSS Custom Properties for Sacred Color Palette */
+        :root {
+          /* Sacred Earth Tones */
+          --earth-deep: #2D1B0F;        /* Deep earth brown */
+          --earth-rich: #4A2C17;        /* Rich soil */
+          --earth-warm: #6B3E25;        /* Warm earth */
+          
+          /* Sacred Greens */
+          --forest-deep: #1A2F1A;       /* Deep forest */
+          --forest-rich: #2D4A2D;       /* Rich forest */
+          --sage-soft: #5A6B5A;         /* Soft sage */
+          
+          /* Sacred Golds & Ambers */
+          --gold-sacred: #D4AF37;       /* Sacred gold */
+          --amber-warm: #E6B800;        /* Warm amber */
+          --amber-soft: #F4D03F;        /* Soft amber glow */
+          --candlelight: #FFE55C;       /* Candlelight yellow */
+          
+          /* Neutral Sacred Tones */
+          --stone-dark: #3A3A3A;        /* Dark stone */
+          --stone-medium: #5D5D5D;      /* Medium stone */
+          --stone-light: #8A8A8A;       /* Light stone */
+          --parchment: #F5F5DC;         /* Parchment white */
+          --smoke: #E8E8E8;             /* Smoke white */
+          
+          /* Gradients */
+          --gradient-earth: linear-gradient(135deg, var(--earth-deep) 0%, var(--forest-deep) 100%);
+          --gradient-sacred: linear-gradient(135deg, var(--earth-rich) 0%, var(--forest-rich) 50%, var(--earth-deep) 100%);
+          --gradient-blessing: linear-gradient(135deg, var(--amber-warm) 0%, var(--gold-sacred) 100%);
+        }
+
+        /* Base Styles */
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          background: var(--gradient-earth);
+          background-attachment: fixed;
+          color: var(--smoke);
+          line-height: 1.6;
+          margin: 0;
+          padding: 0;
+          min-height: 100vh;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Crimson Text', serif;
+          font-weight: 600;
+          line-height: 1.2;
+          margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+
+        /* Sacred Text Effects */
+        .glow-text {
+          color: var(--amber-warm);
+          text-shadow: 0 0 10px rgba(230, 184, 0, 0.3), 0 0 20px rgba(230, 184, 0, 0.1);
+        }
+
+        .glow-starlight-text {
+          color: var(--gold-sacred);
+          text-shadow: 0 0 8px rgba(212, 175, 55, 0.4), 0 0 16px rgba(212, 175, 55, 0.2);
+        }
+
+        .text-fire {
+          color: var(--amber-soft);
+        }
+
+        .text-starlight {
+          color: var(--gold-sacred);
+        }
+
+        /* Header & Footer */
+        .header-footer-bg {
+          background: rgba(45, 27, 15, 0.9);
+          border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-border-top {
+          border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* Card System */
+        .card {
+          background: rgba(45, 27, 15, 0.8);
+          border: 1px solid rgba(212, 175, 55, 0.3);
+          border-radius: 12px;
+          backdrop-filter: blur(10px);
+          box-shadow: 
+            0 4px 20px rgba(0, 0, 0, 0.3),
+            inset 0 1px 0 rgba(212, 175, 55, 0.1);
+          transition: all 0.3s ease;
+          position: relative;
+        }
+
+        .card:hover {
+          transform: translateY(-2px);
+          box-shadow: 
+            0 8px 30px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(212, 175, 55, 0.2),
+            0 0 20px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Buttons */
+        .btn-primary {
+          background: var(--gradient-blessing);
+          color: var(--earth-deep);
+          font-weight: 600;
+          padding: 12px 24px;
+          border-radius: 8px;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+          background: linear-gradient(135deg, var(--gold-sacred) 0%, var(--amber-warm) 100%);
+        }
+
+        .btn-secondary {
+          background: rgba(45, 27, 15, 0.8);
+          color: var(--gold-sacred);
+          font-weight: 500;
+          padding: 10px 20px;
+          border: 2px solid var(--gold-sacred);
+          border-radius: 8px;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+          background: rgba(212, 175, 55, 0.1);
+          transform: translateY(-1px);
+          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Form Elements */
+        .input-text-area {
+          width: 100%;
+          background: rgba(26, 47, 26, 0.6);
+          border: 2px solid rgba(212, 175, 55, 0.3);
+          border-radius: 8px;
+          padding: 12px;
+          color: var(--smoke);
+          font-family: 'Inter', sans-serif;
+          resize: vertical;
+          transition: all 0.3s ease;
+        }
+
+        .input-text-area:focus {
+          outline: none;
+          border-color: var(--gold-sacred);
+          box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+          background: rgba(26, 47, 26, 0.8);
+        }
+
+        .input-text-area::placeholder {
+          color: var(--stone-light);
+          font-style: italic;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+          background: rgba(26, 47, 26, 0.6);
+          border: 1px solid rgba(212, 175, 55, 0.3);
+          overflow: hidden;
+        }
+
+        .progress-fill {
+          background: var(--gradient-blessing);
+          transition: width 0.6s ease;
+          box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Icons */
+        .section-header-icon {
+          display: inline-block;
+          font-size: 1.2em;
+          filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+        }
+
+        .icon {
+          color: var(--amber-warm);
+        }
+
+        .icon-starlight {
+          color: var(--gold-sacred);
+        }
+
+        /* Sacred Decorative Elements */
+        .card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, var(--gold-sacred), transparent);
+          opacity: 0.5;
+        }
+
+        /* Animation Classes */
+        @keyframes sacred-glow {
+          0%, 100% { 
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3), 0 0 20px rgba(212, 175, 55, 0.1); 
+          }
+          50% { 
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5), 0 0 30px rgba(212, 175, 55, 0.2); 
+          }
+        }
+
+        .animate-sacred-glow {
+          animation: sacred-glow 3s ease-in-out infinite;
+        }
+
+        /* Special Gradient Backgrounds for Content Sections */
+        .bg-gradient-to-br.from-orange-900\/30.to-purple-900\/30 {
+          background: linear-gradient(135deg, 
+            rgba(74, 44, 23, 0.6) 0%, 
+            rgba(45, 27, 15, 0.6) 100%);
+        }
+
+        .bg-gradient-to-br.from-purple-900\/30.to-slate-900\/30 {
+          background: linear-gradient(135deg, 
+            rgba(45, 27, 15, 0.6) 0%, 
+            rgba(26, 47, 26, 0.6) 100%);
+        }
+
+        .bg-gradient-to-br.from-green-900\/30.to-blue-900\/30 {
+          background: linear-gradient(135deg, 
+            rgba(26, 47, 26, 0.6) 0%, 
+            rgba(45, 27, 15, 0.6) 100%);
+        }
+
+        /* Border Colors */
+        .border-orange-700\/50 {
+          border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .border-purple-700\/50 {
+          border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .border-green-700\/50 {
+          border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        /* Text Colors */
+        .text-orange-300 {
+          color: var(--amber-warm);
+        }
+
+        .text-purple-300 {
+          color: var(--gold-sacred);
+        }
+
+        .text-green-300 {
+          color: var(--amber-soft);
+        }
+
+        /* Sacred Blessing Atmosphere */
+        body::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: 
+            radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(230, 184, 0, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(45, 27, 15, 0.3) 0%, transparent 70%);
+          pointer-events: none;
+          z-index: -1;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+        
+        .lg-grid-cols-3 {
+            grid-template-columns: 2fr 1fr;
+        }
+        
+        @media (min-width: 1024px) {
+            .lg-grid-cols-3 {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .space-y-8 > * + * {
+            margin-top: 2rem;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .justify-between {
+            justify-content: space-between;
+        }
+        
+        .space-x-4 > * + * {
+            margin-left: 1rem;
+        }
+        
+        .opacity-50 {
+            opacity: 0.5;
+        }
+        
+        .cursor-not-allowed {
+            cursor: not-allowed;
+        }
+        
+        .aspect-video {
+            aspect-ratio: 16 / 9;
+            background: rgba(26, 47, 26, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--stone-light);
+        }
+        
+        .block {
+            display: block;
+        }
+        
+        .w-full {
+            width: 100%;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-4 {
+            margin-top: 1rem;
+        }
+        
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+        
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
+        
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+        
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+        
+        .mr-2 {
+            margin-right: 0.5rem;
+        }
+        
+        .ml-2 {
+            margin-left: 0.5rem;
+        }
+        
+        .p-6 {
+            padding: 1.5rem;
+        }
+        
+        .p-8 {
+            padding: 2rem;
+        }
+        
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .py-6 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        .text-lg {
+            font-size: 1.125rem;
+        }
+        
+        .text-xl {
+            font-size: 1.25rem;
+        }
+        
+        .text-3xl {
+            font-size: 1.875rem;
+        }
+        
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        
+        .text-xs {
+            font-size: 0.75rem;
+        }
+        
+        .font-bold {
+            font-weight: 700;
+        }
+        
+        .font-semibold {
+            font-weight: 600;
+        }
+        
+        .font-medium {
+            font-weight: 500;
+        }
+        
+        .italic {
+            font-style: italic;
+        }
+        
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+        
+        .min-h-screen {
+            min-height: 100vh;
+        }
+        
+        .flex-col {
+            flex-direction: column;
+        }
+        
+        .flex-grow {
+            flex-grow: 1;
+        }
+        
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .shadow-inner {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        }
+        
+        .z-10 {
+            z-index: 10;
+        }
+        
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+        }
+        
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        
+        .list-disc {
+            list-style-type: disc;
+        }
+        
+        .list-inside {
+            list-style-position: inside;
+        }
+        
+        .space-y-1 > * + * {
+            margin-top: 0.25rem;
+        }
+        
+        .space-y-2 > * + * {
+            margin-top: 0.5rem;
+        }
+        
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+        
+        .h-10 {
+            height: 2.5rem;
+        }
+        
+        .w-auto {
+            width: auto;
+        }
+        
+        .opacity-90 {
+            opacity: 0.9;
+        }
+        
+        .h-3 {
+            height: 0.75rem;
+        }
+        
+        .h-full {
+            height: 100%;
+        }
+        
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          h1 { font-size: 2rem; }
+          h2 { font-size: 1.75rem; }
+          h3 { font-size: 1.25rem; }
+          
+          .card {
+            padding: 1rem;
+          }
+          
+          .btn-primary,
+          .btn-secondary {
+            padding: 10px 16px;
+            font-size: 0.9rem;
+          }
+        }
+    </style>
 </head>
-    <body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col">
     <!-- Header -->
     <header class="w-full header-footer-bg backdrop-blur-md py-4 shadow-lg z-10">
-        <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+        <div class="container flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <img src="https://placehold.co/150x40/000000/FFFFFF?text=Clinton+Serio" alt="Clinton Serio Logo" class="h-10 w-auto opacity-90">
-                <span class="text-xl text-gray-400 glow-starlight-text">Presents</span>
+                <!-- Clinton Serio Signature Graphic -->
+                <img src="https://placehold.co/150x40/D4AF37/2D1B0F?text=Clinton+Serio" alt="Clinton Serio Logo" class="h-10 w-auto opacity-90">
+                <span class="text-xl glow-starlight-text">Presents</span>
             </div>
             <div class="flex items-center space-x-4">
-                <span class="text-xl font-semibold text-white glow-starlight-text">Blessing Week</span>
-                <span class="text-lg text-amber-300 glow-text">Day 5</span>
+                <span class="text-xl font-semibold glow-starlight-text">Blessing Week</span>
+                <span class="text-lg glow-text animate-sacred-glow">Day 6</span>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-6xl mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <main class="flex-grow container py-8">
+        <div class="grid grid-cols-1 lg-grid-cols-3">
             <!-- Main Content Area -->
-            <section class="lg:col-span-2 space-y-8">
-                <div class="card p-6 md:p-8">
-                    <h2 class="text-3xl font-bold text-white mb-4 glow-text">Day 5: Blessing & Charging</h2>
-                    <p class="text-lg text-gray-300 mb-6">Theme: Filling your field with positive energy</p>
+            <section class="space-y-8">
+                <div class="card p-6">
+                    <h1 class="text-3xl font-bold mb-4 glow-text">Day 6: Energy Field Protection</h1>
+                    <p class="text-lg mb-6 glow-starlight-text">Theme: Shielding your energy from external interference. Your field is sacred space.</p>
 
                     <!-- Today's Message -->
                     <div class="bg-gradient-to-br from-orange-900/30 to-purple-900/30 border border-orange-700/50 rounded-lg p-6 mb-8 shadow-inner">
                         <h3 class="text-xl font-semibold text-orange-300 mb-3 flex items-center">
-                            <span class="section-header-icon mr-2 icon">&#10024;</span> <!-- Sparkles icon -->
+                            <span class="section-header-icon mr-2 icon">✨</span>
                             Your Daily Ignition
                         </h3>
-                        <p class="text-gray-200 leading-relaxed">
-                            Now we fill the clean space. Cleaning was just the start. An empty field needs to be filled with intention. Today we're actively charging your field with specific energies that serve your highest good. What you focus on expands. The quantum mirror reflects what you project.
+                        <p class="leading-relaxed">
+                            Your energy field is sacred space. Time to learn how to protect it. You don't need to absorb everyone else's chaos. You don't need to take on the world's problems. Today we're building energetic sovereignty - conscious boundaries that keep you centered in your own power.
                         </p>
                     </div>
 
                     <!-- Watch Video -->
                     <div class="card p-6 mb-8">
                         <h3 class="text-xl font-semibold text-starlight mb-4 flex items-center">
-                            <span class="section-header-icon mr-2 icon-starlight">&#9654;</span> <!-- Play icon -->
-                            WATCH: Blessing & Charging Your Field
+                            <span class="section-header-icon mr-2 icon-starlight">▶</span>
+                            WATCH: Building Your Energy Shield
                         </h3>
-                        <p class="text-gray-300 mb-4">
-                            Here is the full video with step-by-step explanation of blessing and charging. Make space and time to focus on each section. Trust your gut and feel this. I'm showing you exactly how to draw in powerful energies and anchor them in your field and objects.
+                        <p class="mb-4">
+                            Here is the full video with step-by-step explanation for creating and maintaining energetic protection. Make space and time to focus on each section. Trust your gut and feel this. I'm teaching you techniques that work in any situation - family gatherings, work meetings, crowded spaces.
                         </p>
-                        <div class="aspect-video bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">
-                            <span class="text-lg">Video Player Placeholder</span>
-                            <!-- Replace with actual video embed code from Vimeo/Wistia -->
+                        <div class="aspect-video">
+                            <span class="text-lg">Video Player - Energy Protection Techniques</span>
                         </div>
-                        <a href="#" class="btn-primary w-full mt-6 block text-center" onclick="alert('Video playback functionality is not active in this demo.'); return false;">
+                        <button class="btn-primary w-full mt-6 block text-center" onclick="alert('Video playback functionality is not active in this demo.');">
                             Access Video Lesson
-                        </a>
+                        </button>
                     </div>
 
                     <!-- Read Materials -->
                     <div class="card p-6 mb-8">
                         <h3 class="text-xl font-semibold text-starlight mb-4 flex items-center">
-                            <span class="section-header-icon mr-2 icon-starlight">&#128214;</span> <!-- Book icon -->
-                            READ: The Spiritual Art of Blessing
+                            <span class="section-header-icon mr-2 icon-starlight">📖</span>
+                            READ: The Science of Energetic Boundaries
                         </h3>
-                        <p class="text-gray-300 mb-4">
-                            This guide explores the science and spirit of blessing across traditions. This is universal technology.
+                        <p class="mb-4">
+                            This guide explores the physics and metaphysics of energy field protection. Learn why some people drain you and how to maintain your center in any environment.
                         </p>
-                        <a href="#" target="_blank" class="btn-secondary w-full block text-center" onclick="alert('PDF download functionality is not active in this demo.'); return false;">
+                        <a href="Day 6_ Energy Field Protection - Complete Content Package.pdf" target="_blank" class="btn-secondary w-full block text-center">
                             Download Reading Material (PDF)
                         </a>
                     </div>
@@ -79,24 +652,25 @@
                     <!-- Do This Now -->
                     <div class="card p-6 mb-8">
                         <h3 class="text-xl font-semibold text-fire mb-4 flex items-center">
-                            <span class="section-header-icon mr-2 icon">&#10003;</span> <!-- Checkmark icon -->
-                            DO THIS NOW: Five Elements Blessing & Anchor Charging
+                            <span class="section-header-icon mr-2 icon">✓</span>
+                            DO THIS NOW: The "Sacred Boundary" Shield Technique
                         </h3>
-                        <p class="text-gray-300 mb-4">
-                            The "Five Elements Blessing" ritual and charging your reset anchor object. 20 minutes. Full attention. Your intention creates your reality.
+                        <p class="mb-4">
+                            15 minutes to create your energetic shield. This isn't meditation - this is active protection work. Your energy is your life force. Protect it like you mean it.
                         </p>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="text-lg font-medium text-white mb-2">Duration:</h4>
-                                <p class="text-gray-300">20 minutes</p>
+                                <h4 class="text-lg font-medium mb-2 glow-starlight-text">Duration:</h4>
+                                <p>15 minutes</p>
                             </div>
                             <div>
-                                <h4 class="text-lg font-medium text-white mb-2">Key Practice:</h4>
-                                <ul class="list-disc list-inside text-gray-300 space-y-1">
-                                    <li>Connect to Source (brilliant sun of white-gold light).</li>
-                                    <li>Shower light through crown, clearing mental static, throat blocks, emotional residue, etc.</li>
-                                    <li>Expand light outwards through all energy field layers.</li>
-                                    <li>Visualize field crystallizing into diamond-like brilliance.</li>
+                                <h4 class="text-lg font-medium mb-2 glow-starlight-text">Key Practice:</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Ground yourself deeply - roots into earth core.</li>
+                                    <li>Visualize brilliant white-gold light filling your entire field.</li>
+                                    <li>Create a crystalline shield at your field's edge - mirror-like surface.</li>
+                                    <li>Program it: "Only love and light may enter. All else is reflected back."</li>
+                                    <li>Test it mentally with different scenarios - family, work, crowds.</li>
                                 </ul>
                             </div>
                         </div>
@@ -105,77 +679,112 @@
                     <!-- Real Talk Reflection -->
                     <div class="bg-gradient-to-br from-purple-900/30 to-slate-900/30 border border-purple-700/50 rounded-lg p-6 shadow-inner">
                         <h3 class="text-xl font-semibold text-purple-300 mb-3 flex items-center">
-                            <span class="section-header-icon mr-2 icon">&#128172;</span> <!-- Speech bubble icon -->
+                            <span class="section-header-icon mr-2 icon">💬</span>
                             REAL TALK: Your Quantum Reflection
                         </h3>
-                        <p class="text-gray-200 italic leading-relaxed">
-                            "What three energies do you most need right now? How did it feel to intentionally draw them in? The quantum mirror responds to clarity and focus."
+                        <p class="italic leading-relaxed mb-4">
+                            "Which situations drain your energy most? How did it feel to consciously create a protective boundary? Notice the difference in your energy when you're shielded vs. wide open."
                         </p>
-                         <textarea class="input-text-area mt-4" rows="4" placeholder="Write your reflections here..."></textarea>
+                        <textarea class="input-text-area" rows="4" placeholder="Write your reflections here..."></textarea>
                     </div>
                 </div>
             </section>
 
             <!-- Sidebar -->
-            <aside class="lg:col-span-1 space-y-8">
+            <aside class="space-y-8">
                 <!-- Navigation -->
-                <div class="card p-6 flex justify-between items-center">
-                    <a href="blessing_week_day4.html" class="btn-secondary text-center flex items-center">
-                        <span class="text-xl mr-2">&#9664;</span> <!-- Left arrow -->
-                        Day 4
-                    </a>
-                    <a href="blessing_week_day6.html" class="btn-primary text-center flex items-center">
-                        Day 6
-                        <span class="text-xl ml-2">&#9654;</span> <!-- Right arrow -->
-                    </a>
+                <div class="card p-6">
+                    <div class="flex justify-between items-center">
+                        <a href="day5.html" class="btn-secondary flex items-center">
+                            <span class="text-xl mr-2">◀</span>
+                            Day 5
+                        </a>
+                        <a href="day7.html" class="btn-primary flex items-center">
+                            Day 7
+                            <span class="text-xl ml-2">▶</span>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Progress Tracker Placeholder -->
+                <!-- Progress Tracker -->
                 <div class="card p-6">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="section-header-icon mr-2 icon-starlight">&#128200;</span> <!-- Chart icon -->
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="section-header-icon mr-2 icon-starlight">📊</span>
                         Your Journey Progress
                     </h3>
-                    <p class="text-gray-300 mb-2">5 of 7 days completed (Approx. 71%)</p>
+                    <p class="mb-2">Day 6 of 7 (86% Complete)</p>
                     <div class="w-full h-3 rounded-full progress-bar">
-                        <div class="h-full rounded-full progress-fill" style="width: 71%;"></div>
+                        <div class="h-full rounded-full progress-fill" style="width: 86%;"></div>
                     </div>
-                    <p class="text-gray-400 text-sm mt-3">You're making powerful momentum, keep going!</p>
+                    <p class="text-sm mt-3 glow-text">You're almost there! One more day to go.</p>
                 </div>
 
-                 <!-- Supplies Refresher -->
+                <!-- Supplies Refresher -->
                 <div class="card p-6">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="section-header-icon mr-2 icon">&#128293;</span> <!-- Flame icon -->
-                        Supplies Reminder
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="section-header-icon mr-2 icon">🔥</span>
+                        Sacred Supplies
                     </h3>
-                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <ul class="list-disc list-inside space-y-2">
                         <li>White candle</li>
                         <li>Bowl of water (glass works best)</li>
                         <li>Salt (sea salt or Himalayan if you can)</li>
                         <li>Sage, palo santo, or incense you connect with</li>
-                        <li>Small object to be charged as your "reset anchor"</li>
+                        <li>Your charged "reset anchor" object</li>
                     </ul>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="section-header-icon mr-2 icon-starlight">🗺️</span>
+                        Week Overview
+                    </h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 1: Energy Field Awareness</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 2: Space Clearing</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 3: Energy Cord Cutting</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 4: Energy Field Clearing</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 5: Blessing & Charging</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-fire mr-2">▶</span>
+                            <span class="font-medium glow-text">Day 6: Energy Field Protection</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 7: Energy Field Maintenance</span>
+                        </div>
+                    </div>
                 </div>
             </aside>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="w-full header-footer-bg backdrop-blur-md py-6 shadow-lg mt-8 footer-border-top">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-gray-400 text-sm glow-starlight-text">
+    <footer class="w-full header-footer-bg backdrop-blur-md py-6 shadow-lg footer-border-top">
+        <div class="container text-center">
+            <p class="text-sm glow-starlight-text">
                 Clinton Serio: Always with you on your transformation journey.
             </p>
-            <p class="text-gray-500 text-xs mt-2 glow-text">
-                &copy; 2024 Clinton Serio. Big brother. Rebel force.
+            <p class="text-xs mt-2 glow-text">
+                © 2024 Clinton Serio. Spiritual Big Brother. Rebel force.
             </p>
         </div>
     </footer>
-        <script>
-    AOS.init({ duration: 800, easing: 'ease-out-back', once: true });
-  </script>
-  <!-- sticky-header / other shared scripts -->
-  <script src="script.js"></script>
-    </body>
+</body>
 </html>
