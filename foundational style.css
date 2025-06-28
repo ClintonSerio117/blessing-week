@@ -1,270 +1,313 @@
-/*==========================================
-=            Root Variables                =
-==========================================*/
+/* Blessing Week Sacred Design - style.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* CSS Custom Properties for Sacred Color Palette */
 :root {
-  /* Primary Colors */
-  --color-fire:        #FF4500;  /* Intense OrangeRed */
-  --color-starlight:   #4CAF50;  /* Bold Green-Blue */
-  --color-bg-dark:     #0A0A1F;  /* Coal black-blue */
-  --color-bg-dark-2:   #16213E;  /* Deep midnight */
-  --color-fg-light:    #E0E7FF;  /* Soft off-white */
-  --color-accent-a:    rgba(100, 181, 246, 0.5);
-  --color-accent-b:    rgba(255, 87, 34, 0.5);
-
-  /* Typography */
-  --font-sans: 'Inter', sans-serif;
-  --text-base: 1rem;       /* 16px */
-  --text-lg:   1.125rem;   /* 18px */
-  --text-xl:   1.25rem;    /* 20px */
-  --text-2xl:  1.5rem;     /* 24px */
-
-  /* Spacing */
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
+  /* Sacred Earth Tones */
+  --earth-deep: #2D1B0F;        /* Deep earth brown */
+  --earth-rich: #4A2C17;        /* Rich soil */
+  --earth-warm: #6B3E25;        /* Warm earth */
+  
+  /* Sacred Greens */
+  --forest-deep: #1A2F1A;       /* Deep forest */
+  --forest-rich: #2D4A2D;       /* Rich forest */
+  --sage-soft: #5A6B5A;         /* Soft sage */
+  
+  /* Sacred Golds & Ambers */
+  --gold-sacred: #D4AF37;       /* Sacred gold */
+  --amber-warm: #E6B800;        /* Warm amber */
+  --amber-soft: #F4D03F;        /* Soft amber glow */
+  --candlelight: #FFE55C;       /* Candlelight yellow */
+  
+  /* Neutral Sacred Tones */
+  --stone-dark: #3A3A3A;        /* Dark stone */
+  --stone-medium: #5D5D5D;      /* Medium stone */
+  --stone-light: #8A8A8A;       /* Light stone */
+  --parchment: #F5F5DC;         /* Parchment white */
+  --smoke: #E8E8E8;             /* Smoke white */
+  
+  /* Gradients */
+  --gradient-earth: linear-gradient(135deg, var(--earth-deep) 0%, var(--forest-deep) 100%);
+  --gradient-sacred: linear-gradient(135deg, var(--earth-rich) 0%, var(--forest-rich) 50%, var(--earth-deep) 100%);
+  --gradient-blessing: linear-gradient(135deg, var(--amber-warm) 0%, var(--gold-sacred) 100%);
 }
 
-/*==========================================
-=            Global Resets                =
-==========================================*/
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+/* Base Styles */
+* {
   box-sizing: border-box;
 }
 
-html {
-  font-size: 100%;
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
-  line-height: 1.6;
-  color: var(--color-fg-light);
-  background: linear-gradient(
-    135deg,
-    var(--color-bg-dark) 0%,
-    var(--color-bg-dark-2) 50%,
-    var(--color-bg-dark) 100%
-  );
-  background-image:
-    radial-gradient(circle at top left, var(--color-accent-a) 0%, transparent 30%),
-    radial-gradient(circle at bottom right, var(--color-accent-b) 0%, transparent 30%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--gradient-earth);
   background-attachment: fixed;
+  color: var(--smoke);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-/*==========================================
-=            Layout Helpers               =
-==========================================*/
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--space-md);
-}
-
-section,
-aside {
-  margin-bottom: var(--space-xl);
-}
-
-/*==========================================
-=            Header & Nav                 =
-==========================================*/
-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  transition: box-shadow 0.3s ease;
-}
-header.scrolled {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}.header-footer-bg {
-  background-color: rgba(15, 25, 40, 0.95);
-  border-image: linear-gradient(
-    to right,
-    var(--color-accent-a) 0%,
-    transparent 20%,
-    transparent 80%,
-    var(--color-accent-b) 100%
-  ) 1;
-}
-
-nav {
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  gap: var(--space-md);
-  padding: var(--space-sm) 0;
-}
-
-nav a {
-  text-decoration: none;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
   font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-nav .btn-primary {
-  background-image: linear-gradient(to right, var(--color-fire), #E64A19);
-  color: #fff;
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* Sacred Text Effects */
+.glow-text {
+  color: var(--amber-warm);
+  text-shadow: 0 0 10px rgba(230, 184, 0, 0.3), 0 0 20px rgba(230, 184, 0, 0.1);
 }
 
-nav .btn-secondary {
-  border: 1px solid var(--color-starlight);
-  color: var(--color-starlight);
+.glow-starlight-text {
+  color: var(--gold-sacred);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.4), 0 0 16px rgba(212, 175, 55, 0.2);
 }
 
-/*==========================================
-=            Card Component               =
-==========================================*/
+.text-fire {
+  color: var(--amber-soft);
+}
+
+.text-starlight {
+  color: var(--gold-sacred);
+}
+
+/* Header & Footer */
+.header-footer-bg {
+  background: rgba(45, 27, 15, 0.9);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-border-top {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Card System */
 .card {
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-  border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  background: rgba(45, 27, 15, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(212, 175, 55, 0.1);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.8);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(212, 175, 55, 0.2),
+    0 0 20px rgba(212, 175, 55, 0.1);
 }
 
-/*==========================================
-=            Button Styles                =
-==========================================*/
-@keyframes warrior-pulse {
-  0%, 100% {
-    box-shadow: 0 0 10px var(--color-fire);
-  }
-  50% {
-    box-shadow: 0 0 20px var(--color-fire);
-  }
-}
-
+/* Buttons */
 .btn-primary {
-  /* existing rules… */
-  animation: warrior-pulse 1.8s infinite;
-}.btn-primary {
-  display: inline-block;
-  background-image: linear-gradient(to right, var(--color-fire), #E64A19);
-  color: #fff;
-  font-weight: 700;
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  background: var(--gradient-blessing);
+  color: var(--earth-deep);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
-}
-
-.btn-primary:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, var(--gold-sacred) 0%, var(--amber-warm) 100%);
 }
 
 .btn-secondary {
-  display: inline-block;
-  background: transparent;
-  color: var(--color-starlight);
-  border: 1px solid var(--color-starlight);
-  font-weight: 600;
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
-  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(45, 27, 15, 0.8);
+  color: var(--gold-sacred);
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 2px solid var(--gold-sacred);
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background: rgba(76, 175, 80, 0.1);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
-/*==========================================
-=       Text & Icon Utility Classes       =
-==========================================*/
-.text-fire {
-  color: var(--color-fire);
-}
-
-.text-starlight {
-  color: var(--color-starlight);
-}
-
-.glow-text {
-  text-shadow:
-    0 0 5px rgba(255, 69, 0, 0.8),
-    0 0 10px rgba(255, 69, 0, 0.6),
-    0 0 15px rgba(255, 69, 0, 0.4);
-}
-
-.glow-starlight-text {
-  text-shadow:
-    0 0 8px rgba(76, 175, 80, 0.9),
-    0 0 15px rgba(76, 175, 80, 0.7),
-    0 0 25px rgba(76, 175, 80, 0.5);
-}
-
-.icon,
-.icon-starlight {
-  font-size: 1.5rem;
-  vertical-align: middle;
-}
-
-.icon {
-  filter: drop-shadow(0 0 2px rgba(255, 69, 0, 0.8));
-}
-
-.icon-starlight {
-  filter: drop-shadow(0 0 2px rgba(76, 175, 80, 0.8));
-}
-
-/*==========================================
-=           Progress Bar                  =
-==========================================*/
-.progress-bar {
-  background-color: #374151;
-  border-radius: 9999px;
-  overflow: hidden;
-  height: 0.5rem;
-}
-
-.progress-fill {
-  width: 0;
-  height: 100%;
-  background-image: linear-gradient(to right, var(--color-starlight), var(--color-fire));
-  border-radius: 9999px;
-  box-shadow:
-    0 0 8px rgba(255, 69, 0, 0.5),
-    0 0 8px rgba(76, 175, 80, 0.5);
-}
-
-/*==========================================
-=           Form Controls                 =
-==========================================*/
+/* Form Elements */
 .input-text-area {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--color-fg-light);
-  padding: var(--space-md);
-  border-radius: 0.5rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(26, 47, 26, 0.6);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--smoke);
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  transition: all 0.3s ease;
 }
 
 .input-text-area:focus {
   outline: none;
-  border-color: var(--color-starlight);
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+  border-color: var(--gold-sacred);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  background: rgba(26, 47, 26, 0.8);
+}
+
+.input-text-area::placeholder {
+  color: var(--stone-light);
+  font-style: italic;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: rgba(26, 47, 26, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: var(--gradient-blessing);
+  transition: width 0.6s ease;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* Icons */
+.section-header-icon {
+  display: inline-block;
+  font-size: 1.2em;
+  filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+}
+
+.icon {
+  color: var(--amber-warm);
+}
+
+.icon-starlight {
+  color: var(--gold-sacred);
+}
+
+/* Sacred Decorative Elements */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-sacred), transparent);
+  opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation Classes */
+@keyframes sacred-glow {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3), 0 0 20px rgba(212, 175, 55, 0.1); 
+  }
+  50% { 
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5), 0 0 30px rgba(212, 175, 55, 0.2); 
+  }
+}
+
+.animate-sacred-glow {
+  animation: sacred-glow 3s ease-in-out infinite;
+}
+
+/* Special Gradient Backgrounds for Content Sections */
+.bg-gradient-to-br.from-orange-900\/30.to-purple-900\/30 {
+  background: linear-gradient(135deg, 
+    rgba(74, 44, 23, 0.6) 0%, 
+    rgba(45, 27, 15, 0.6) 100%);
+}
+
+.bg-gradient-to-br.from-purple-900\/30.to-slate-900\/30 {
+  background: linear-gradient(135deg, 
+    rgba(45, 27, 15, 0.6) 0%, 
+    rgba(26, 47, 26, 0.6) 100%);
+}
+
+.bg-gradient-to-br.from-green-900\/30.to-blue-900\/30 {
+  background: linear-gradient(135deg, 
+    rgba(26, 47, 26, 0.6) 0%, 
+    rgba(45, 27, 15, 0.6) 100%);
+}
+
+/* Border Colors */
+.border-orange-700\/50 {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.border-purple-700\/50 {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.border-green-700\/50 {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Text Colors */
+.text-orange-300 {
+  color: var(--amber-warm);
+}
+
+.text-purple-300 {
+  color: var(--gold-sacred);
+}
+
+.text-green-300 {
+  color: var(--amber-soft);
+}
+
+/* Sacred Blessing Atmosphere */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(230, 184, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(45, 27, 15, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
