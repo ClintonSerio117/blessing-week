@@ -268,6 +268,34 @@
         .rounded-full {
             border-radius: 9999px;
         }
+        /* Responsive Design Improvement */
+        .header-flex-container {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          h1 { font-size: 2rem; }
+          h2 { font-size: 1.75rem; }
+          h3 { font-size: 1.25rem; }
+          
+          .card {
+            padding: 1rem;
+          }
+          
+          .btn-primary,
+          .btn-secondary {
+            padding: 10px 16px;
+            font-size: 0.9rem;
+          }
+          
+          /* Additional mobile font adjustments */
+          .text-lg, .text-xl {
+            font-size: 1rem;
+          }
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -387,7 +415,7 @@
                     <h3 class="text-xl font-semibold mb-4 flex items-center">
                         <span class="section-header-icon mr-2 icon-starlight">📊</span>
                         Your Journey Progress
-                    </h3.
+                    </h3>
                     <p class="mb-2">Day 3 of 7 (43% Complete)</p>
                     <div class="w-full h-3 rounded-full progress-bar">
                         <div class="h-full rounded-full progress-fill" style="width: 43%;"></div>
