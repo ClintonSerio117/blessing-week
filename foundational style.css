@@ -76,7 +76,15 @@ aside {
 /*==========================================
 =            Header & Nav                 =
 ==========================================*/
-.header-footer-bg {
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: box-shadow 0.3s ease;
+}
+header.scrolled {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}.header-footer-bg {
   background-color: rgba(15, 25, 40, 0.95);
   border-image: linear-gradient(
     to right,
@@ -131,7 +139,19 @@ nav .btn-secondary {
 /*==========================================
 =            Button Styles                =
 ==========================================*/
+@keyframes warrior-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--color-fire);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--color-fire);
+  }
+}
+
 .btn-primary {
+  /* existing rules… */
+  animation: warrior-pulse 1.8s infinite;
+}.btn-primary {
   display: inline-block;
   background-image: linear-gradient(to right, var(--color-fire), #E64A19);
   color: #fff;
