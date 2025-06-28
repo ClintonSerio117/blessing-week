@@ -63,7 +63,7 @@ h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 
 /* Sacred Text Effects */
-.glow-text {
+.glow-starlight-text {
   color: var(--amber-warm);
   text-shadow: 0 0 10px rgba(230, 184, 0, 0.3), 0 0 20px rgba(230, 184, 0, 0.1);
 }
@@ -225,8 +225,34 @@ h3 { font-size: 1.5rem; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.25rem; }
+  /* Responsive Design Improvement */
+.header-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
   
   .card {
+    padding: 1rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  
+  /* Additional mobile font adjustments */
+  .text-lg, .text-xl {
+    font-size: 1rem;
+  }
+}  .card {
     padding: 1rem;
   }
   
