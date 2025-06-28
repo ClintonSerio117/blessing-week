@@ -1,15 +1,16 @@
-# ⚡ Clinton Serio Presents: The 7-Day Blessing Week Workshop ⚡
+# ⚡ Clinton Serio Presents: The 7-Day Blessing Week ⚡
 
 Welcome to the **Blessing Week**! This powerful, self-paced workshop is your direct path to reclaiming energetic sovereignty, cleansing your field, and igniting your true presence.
 you plant bananas, you eat bananas, be the creator of you own life!
 ---
 
-## ✨ Overview: Unleash Your Inner Keeper
+## ✨ Overview: Unleash Your Inner Keeper, be the **I AM...**
 
 **Who is this for?**
 This workshop is for anyone ready to:
-* Break free from accumulated energetic clutter and emotional weight.
+* Break free from negative energetic clutter and emotional bad vibes.
 * Master their personal energy field and set powerful boundaries.
+* Cut the cords of energy that does not belong to you.
 * Reclaim their vitality, clarity, and intuitive power.
 * Step into authentic self-command and create their desired reality.
 
@@ -22,7 +23,7 @@ This workshop is for anyone ready to:
 
 ---
 
-## 🧭 How to Use: Your Path to Sovereignty
+## 🧭 How to Use: Your Path to claiming your light
 
 1.  Begin your journey with the [Blessing Week Overview](blessing_week_overview.html) to understand the full scope of transformation.
 2.  Start your daily practice with [Day 1: Energy Field Awareness](blessing_week_day1.html).
@@ -35,8 +36,8 @@ This workshop is for anyone ready to:
 
 ---
 
-## 🔥 Daily Lessons: Your 7-Day Journey to Transformation
-
+## 🔥 Daily Lessons: Your 7-Day Journey to Transformation begins here
+**TAKE BACK YOUR LIGHT**
 Each lesson is a sacred step in resetting your entire energy system:
 
 * **[Day 1: Energy Field Awareness](day1.html)**
@@ -45,13 +46,13 @@ Each lesson is a sacred step in resetting your entire energy system:
     * _Theme: Cleansing your environment. Your space affects your field more than you realize._
 * **[Day 3: Energy Cord Cutting](day3.html)**
     * _Theme: Releasing energetic attachments. Cut what's draining you to reclaim your energy sovereignty._
-* **[Day 4: Energy Field Clearing](blessing_week_day4.html)**
+* **[Day 4: Energy Field Clearing](day4.html)**
     * _Theme: Cleansing your personal energy body. A deep scrub of accumulated junk and unwanted patterns._
-* **[Day 5: Blessing & Charging](blessing_week_day5.html)**
+* **[Day 5: Blessing & Charging](day5.html)**
     * _Theme: Filling your field with positive energy. Intentionally programming your field for alignment and attraction._
-* **[Day 6: Energy Field Protection](blessing_week_day6.html)**
+* **[Day 6: Energy Field Protection](day6.html)**
     * _Theme: Maintaining your cleansed and blessed state. Building multi-layered energetic shields._
-* **[Day 7: Energy Field Maintenance](blessing_week_day7.html)**
+* **[Day 7: Energy Field Maintenance](day7.html)**
     * _Theme: Creating your ongoing energy hygiene practice. This is just the beginning._
 
 ---
@@ -73,5 +74,5 @@ Each lesson is a sacred step in resetting your entire energy system:
 
 ---
 
-*Feel the shift. Live the truth.*
+*Feel the shift. Live the truth.If you plant bananas, you eat bananas!*
 ```
