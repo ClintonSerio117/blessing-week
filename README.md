@@ -25,7 +25,7 @@ This workshop is for anyone ready to:
 
 ## 🧭 How to Use: Your Path to claiming your light
 
-1.  Begin your journey with the [Blessing Week Overview](blessing_week_overview.html) to understand the full scope of transformation.
+1.  Begin your journey with the [Blessing Week Overview](index.html) to understand the full scope of transformation.
 2.  Start your daily practice with [your Free ARMOUR OF LIGHT self blessing](day1.html).
 3.  Each day, dedicate time to:
     * **WATCH** the video lesson.
