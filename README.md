@@ -26,7 +26,7 @@ This workshop is for anyone ready to:
 ## 🧭 How to Use: Your Path to claiming your light
 
 1.  Begin your journey with the [Blessing Week Overview](index.html) to understand the full scope of transformation.
-2.  Start your daily practice with [your Free ARMOUR OF LIGHT self blessing](day1.html).
+2.  Start your daily practice with [DAY-1.](day1.html) each day will follow on the next until you complete all 7 days, then it resets.
 3.  Each day, dedicate time to:
     * **WATCH** the video lesson.
     * **READ** the supporting materials.
@@ -40,17 +40,17 @@ This workshop is for anyone ready to:
 **TAKE BACK YOUR LIGHT**
 Each lesson is a sacred step in resetting your entire energy system:
 
-* **[Day 1: Energy Field Awareness](day1.html)**
+* **[Day 1: Energy Field Awareness and connection](day1.html)**
     * _Theme: Understanding your personal energy field. You can't clean what you can't see._
 * **[Day 2: Space Clearing](day2.html)**
     * _Theme: Cleansing your environment. Your space affects your field more than you realize._
-* **[Day 3: Energy Cord Cutting](day3.html)**
+* **[Day 3: Energy Cord Cutting and detachment](day3.html)**
     * _Theme: Releasing energetic attachments. Cut what's draining you to reclaim your energy sovereignty._
-* **[Day 4: Energy Field Clearing](day4.html)**
+* **[Day 4: Energy Field Clearing and purification](day4.html)**
     * _Theme: Cleansing your personal energy body. A deep scrub of accumulated junk and unwanted patterns._
 * **[Day 5: Blessing & Charging](day5.html)**
     * _Theme: Filling your field with positive energy. Intentionally programming your field for alignment and attraction._
-* **[Day 6: Energy Field Protection](day6.html)**
+* **[Day 6: Energy Field Protection, creating a armour of light](day6.html)**
     * _Theme: Maintaining your cleansed and blessed state. Building multi-layered energetic shields._
 * **[Day 7: Energy Field Maintenance](day7.html)**
     * _Theme: Creating your ongoing energy hygiene practice. This is just the beginning._
