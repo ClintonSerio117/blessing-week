@@ -4,50 +4,305 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinton Serio – Blessing Week: Day 1</title>
-    <!-- Optional: keep or remove Tailwind as you prefer -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" 
-      rel="stylesheet">
-
-    <!-- ← Add this line so all your pages pull in the shared CSS → -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Sacred CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Additional styles for layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+        
+        .lg-grid-cols-3 {
+            grid-template-columns: 2fr 1fr;
+        }
+        
+        @media (min-width: 1024px) {
+            .lg-grid-cols-3 {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .space-y-8 > * + * {
+            margin-top: 2rem;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .justify-between {
+            justify-content: space-between;
+        }
+        
+        .space-x-4 > * + * {
+            margin-left: 1rem;
+        }
+        
+        .opacity-50 {
+            opacity: 0.5;
+        }
+        
+        .cursor-not-allowed {
+            cursor: not-allowed;
+        }
+        
+        .aspect-video {
+            aspect-ratio: 16 / 9;
+            background: rgba(26, 47, 26, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--stone-light);
+        }
+        
+        .block {
+            display: block;
+        }
+        
+        .w-full {
+            width: 100%;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-4 {
+            margin-top: 1rem;
+        }
+        
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+        
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
+        
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+        
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+        
+        .mr-2 {
+            margin-right: 0.5rem;
+        }
+        
+        .ml-2 {
+            margin-left: 0.5rem;
+        }
+        
+        .p-6 {
+            padding: 1.5rem;
+        }
+        
+        .p-8 {
+            padding: 2rem;
+        }
+        
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .py-6 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        .text-lg {
+            font-size: 1.125rem;
+        }
+        
+        .text-xl {
+            font-size: 1.25rem;
+        }
+        
+        .text-3xl {
+            font-size: 1.875rem;
+        }
+        
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        
+        .text-xs {
+            font-size: 0.75rem;
+        }
+        
+        .font-bold {
+            font-weight: 700;
+        }
+        
+        .font-semibold {
+            font-weight: 600;
+        }
+        
+        .font-medium {
+            font-weight: 500;
+        }
+        
+        .italic {
+            font-style: italic;
+        }
+        
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+        
+        .min-h-screen {
+            min-height: 100vh;
+        }
+        
+        .flex-col {
+            flex-direction: column;
+        }
+        
+        .flex-grow {
+            flex-grow: 1;
+        }
+        
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .shadow-inner {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        }
+        
+        .z-10 {
+            z-index: 10;
+        }
+        
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+        }
+        
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        
+        .list-disc {
+            list-style-type: disc;
+        }
+        
+        .list-inside {
+            list-style-position: inside;
+        }
+        
+        .space-y-1 > * + * {
+            margin-top: 0.25rem;
+        }
+        
+        .space-y-2 > * + * {
+            margin-top: 0.5rem;
+        }
+        
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+        
+        .h-10 {
+            height: 2.5rem;
+        }
+        
+        .w-auto {
+            width: auto;
+        }
+        
+        .opacity-90 {
+            opacity: 0.9;
+        }
+        
+        .h-3 {
+            height: 0.75rem;
+        }
+        
+        .h-full {
+            height: 100%;
+        }
+        
+        .rounded-full {
+            border-radius: 9999px;
+        }
+    </style>
 </head>
 <body class="min-h-screen flex flex-col">
     <!-- Header -->
     <header class="w-full header-footer-bg backdrop-blur-md py-4 shadow-lg z-10">
-        <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+        <div class="container flex items-center justify-between">
             <div class="flex items-center space-x-4">
                 <!-- Clinton Serio Signature Graphic -->
-                <img src="https://placehold.co/150x40/000000/FFFFFF?text=Clinton+Serio" alt="Clinton Serio Logo" class="h-10 w-auto opacity-90">
-                <span class="text-xl text-gray-400 glow-starlight-text">Presents</span>
+                <img src="https://placehold.co/150x40/D4AF37/2D1B0F?text=Clinton+Serio" alt="Clinton Serio Logo" class="h-10 w-auto opacity-90">
+                <span class="text-xl glow-starlight-text">Presents</span>
             </div>
             <div class="flex items-center space-x-4">
-                <span class="text-xl font-semibold text-white glow-starlight-text">Blessing Week</span>
-                <span class="text-lg text-amber-300 glow-text">Day 1</span>
+                <span class="text-xl font-semibold glow-starlight-text">Blessing Week</span>
+                <span class="text-lg glow-text animate-sacred-glow">Day 1</span>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow max-w-6xl mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <main class="flex-grow container py-8">
+        <div class="grid grid-cols-1 lg-grid-cols-3">
             <!-- Main Content Area -->
-            <section class="lg:col-span-2 space-y-8">
-                <div class="card p-6 md:p-8">
-                    <h2 class="text-3xl font-bold text-white mb-4 glow-text">Day 1: Energy Field Awareness</h2>
-                    <p class="text-lg text-gray-300 mb-6">Theme: Understanding your personal energy field</p>
+            <section class="space-y-8">
+                <div class="card p-6">
+                    <h1 class="text-3xl font-bold mb-4 glow-text">Day 1: Energy Field Awareness</h1>
+                    <p class="text-lg mb-6 glow-starlight-text">Theme: Understanding your personal energy field. You can't clean what you can't see.</p>
 
                     <!-- Today's Message -->
                     <div class="bg-gradient-to-br from-orange-900/30 to-purple-900/30 border border-orange-700/50 rounded-lg p-6 mb-8 shadow-inner">
                         <h3 class="text-xl font-semibold text-orange-300 mb-3 flex items-center">
-                            <span class="section-header-icon mr-2 icon">&#10024;</span> <!-- Sparkles icon -->
+                            <span class="section-header-icon mr-2 icon">✨</span>
                             Your Daily Ignition
                         </h3>
-                        <p class="text-gray-200 leading-relaxed">
+                        <p class="leading-relaxed">
                             Listen up, welcome to Day 1 of Blessing Week. This is where things change. Where you take back control of what you absorb and what you reflect. The first step? Awareness. You can't clean what you can't see.
                         </p>
                     </div>
@@ -55,28 +310,27 @@
                     <!-- Watch Video -->
                     <div class="card p-6 mb-8">
                         <h3 class="text-xl font-semibold text-starlight mb-4 flex items-center">
-                            <span class="section-header-icon mr-2 icon-starlight">&#9654;</span> <!-- Play icon -->
+                            <span class="section-header-icon mr-2 icon-starlight">▶</span>
                             WATCH: Your Energy Field Explained
                         </h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="mb-4">
                             Here is the full video with step-by-step explanation of your personal energy field. Make space and time to focus on each section. Trust your gut and feel this. The video breaks down exactly what you're working with and how to sense your own energy.
                         </p>
-                        <div class="aspect-video bg-gray-800 rounded-lg flex items-center justify-center text-gray-400">
-                            <span class="text-lg">Video Player Placeholder</span>
-                            <!-- Actual video embed would go here -->
+                        <div class="aspect-video">
+                            <span class="text-lg">Video Player - Energy Field Awareness</span>
                         </div>
-                        <a href="#" class="btn-primary w-full mt-6 block text-center" onclick="alert('Video playback functionality is not active in this demo.'); return false;">
+                        <button class="btn-primary w-full mt-6 block text-center" onclick="alert('Video playback functionality is not active in this demo.');">
                             Access Video Lesson
-                        </a>
+                        </button>
                     </div>
 
                     <!-- Read Materials -->
                     <div class="card p-6 mb-8">
                         <h3 class="text-xl font-semibold text-starlight mb-4 flex items-center">
-                            <span class="section-header-icon mr-2 icon-starlight">&#128214;</span> <!-- Book icon -->
+                            <span class="section-header-icon mr-2 icon-starlight">📖</span>
                             READ: Understanding Your Energy Field
                         </h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="mb-4">
                             I've attached the PDF that lays out what energy fields actually are - not just spiritual talk, but real talk about how they get messed up and why you need to clean house regularly.
                         </p>
                         <a href="Day 1_ Energy Field Awareness - Complete Content Package.pdf" target="_blank" class="btn-secondary w-full block text-center">
@@ -87,20 +341,20 @@
                     <!-- Do This Now -->
                     <div class="card p-6 mb-8">
                         <h3 class="text-xl font-semibold text-fire mb-4 flex items-center">
-                            <span class="section-header-icon mr-2 icon">&#10003;</span> <!-- Checkmark icon -->
+                            <span class="section-header-icon mr-2 icon">✓</span>
                             DO THIS NOW: Energy Scanning Meditation
                         </h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="mb-4">
                             Find 15 minutes alone. No phone, no distractions. Do the "Energy Scanning" meditation exactly as instructed. Map what's really going on with your energy, not what you wish was happening.
                         </p>
                         <div class="space-y-4">
                             <div>
-                                <h4 class="text-lg font-medium text-white mb-2">Duration:</h4>
-                                <p class="text-gray-300">15 minutes</p>
+                                <h4 class="text-lg font-medium mb-2 glow-starlight-text">Duration:</h4>
+                                <p>15 minutes</p>
                             </div>
                             <div>
-                                <h4 class="text-lg font-medium text-white mb-2">Key Practice:</h4>
-                                <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                <h4 class="text-lg font-medium mb-2 glow-starlight-text">Key Practice:</h4>
+                                <ul class="list-disc list-inside space-y-1">
                                     <li>Quiet space, comfortable sitting.</li>
                                     <li>3 deep breaths, relax body.</li>
                                     <li>Visualize and scan energy field layers (physical, etheric, emotional, mental, spiritual).</li>
@@ -114,51 +368,53 @@
                     <!-- Real Talk Reflection -->
                     <div class="bg-gradient-to-br from-purple-900/30 to-slate-900/30 border border-purple-700/50 rounded-lg p-6 shadow-inner">
                         <h3 class="text-xl font-semibold text-purple-300 mb-3 flex items-center">
-                            <span class="section-header-icon mr-2 icon">&#128172;</span> <!-- Speech bubble icon -->
+                            <span class="section-header-icon mr-2 icon">💬</span>
                             REAL TALK: Your Quantum Reflection
                         </h3>
-                        <p class="text-gray-200 italic leading-relaxed">
+                        <p class="italic leading-relaxed mb-4">
                             "Where in your life are you feeling weighed down right now? What's blocking your flow? Be honest with yourself. The quantum mirror reflects what you project."
                         </p>
-                         <textarea class="input-text-area mt-4" rows="4" placeholder="Write your reflections here..."></textarea>
+                        <textarea class="input-text-area" rows="4" placeholder="Write your reflections here..."></textarea>
                     </div>
                 </div>
             </section>
 
             <!-- Sidebar -->
-            <aside class="lg:col-span-1 space-y-8">
+            <aside class="space-y-8">
                 <!-- Navigation -->
-                <div class="card p-6 flex justify-between items-center">
-                    <a href="blessing_week_day7.html" class="btn-secondary text-center flex items-center opacity-50 cursor-not-allowed">
-                        <span class="text-xl mr-2">&#9664;</span> <!-- Left arrow -->
-                        Previous Day
-                    </a>
-                    <a href="blessing_week_day2.html" class="btn-primary text-center flex items-center">
-                        Day 2
-                        <span class="text-xl ml-2">&#9654;</span> <!-- Right arrow -->
-                    </a>
+                <div class="card p-6">
+                    <div class="flex justify-between items-center">
+                        <button class="btn-secondary flex items-center opacity-50 cursor-not-allowed">
+                            <span class="text-xl mr-2">◀</span>
+                            Previous Day
+                        </button>
+                        <a href="day2.html" class="btn-primary flex items-center">
+                            Day 2
+                            <span class="text-xl ml-2">▶</span>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Progress Tracker Placeholder -->
+                <!-- Progress Tracker -->
                 <div class="card p-6">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="section-header-icon mr-2 icon-starlight">&#128200;</span> <!-- Chart icon -->
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="section-header-icon mr-2 icon-starlight">📊</span>
                         Your Journey Progress
                     </h3>
-                    <p class="text-gray-300 mb-2">1 of 7 days completed (Approx. 14%)</p>
+                    <p class="mb-2">Day 1 of 7 (14% Complete)</p>
                     <div class="w-full h-3 rounded-full progress-bar">
                         <div class="h-full rounded-full progress-fill" style="width: 14%;"></div>
                     </div>
-                    <p class="text-gray-400 text-sm mt-3">Keep going! You're making powerful progress.</p>
+                    <p class="text-sm mt-3 glow-text">Keep going! You're making powerful progress.</p>
                 </div>
 
-                 <!-- Supplies Refresher -->
+                <!-- Supplies Refresher -->
                 <div class="card p-6">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <span class="section-header-icon mr-2 icon">&#128293;</span> <!-- Flame icon -->
-                        Supplies Reminder
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="section-header-icon mr-2 icon">🔥</span>
+                        Sacred Supplies
                     </h3>
-                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <ul class="list-disc list-inside space-y-2">
                         <li>White candle</li>
                         <li>Bowl of water (glass works best)</li>
                         <li>Salt (sea salt or Himalayan if you can)</li>
@@ -166,24 +422,58 @@
                         <li>Small object to be charged as your "reset anchor"</li>
                     </ul>
                 </div>
+
+                <!-- Quick Navigation -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="section-header-icon mr-2 icon-starlight">🗺️</span>
+                        Week Overview
+                    </h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <span class="text-fire mr-2">▶</span>
+                            <span class="font-medium glow-text">Day 1: Energy Field Awareness</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 2: Space Clearing</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 3: Energy Cord Cutting</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 4: Energy Field Clearing</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 5: Blessing & Charging</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 6: Energy Field Protection</span>
+                        </div>
+                        <div class="flex items-center opacity-50">
+                            <span class="mr-2">•</span>
+                            <span>Day 7: Energy Field Maintenance</span>
+                        </div>
+                    </div>
+                </div>
             </aside>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="w-full header-footer-bg backdrop-blur-md py-6 shadow-lg mt-8 footer-border-top">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-gray-400 text-sm glow-starlight-text">
+    <footer class="w-full header-footer-bg backdrop-blur-md py-6 shadow-lg footer-border-top">
+        <div class="container text-center">
+            <p class="text-sm glow-starlight-text">
                 Clinton Serio: Always with you on your transformation journey.
             </p>
-            <p class="text-gray-500 text-xs mt-2 glow-text">
-                &copy; 2024 Clinton Serio. Spiritual entrepreneur. Rebel force.
+            <p class="text-xs mt-2 glow-text">
+                © 2024 Clinton Serio. Spiritual entrepreneur. Rebel force.
             </p>
         </div>
     </footer>
-    <script>
-    AOS.init({ duration: 800, easing: 'ease-out-back', once: true });
-  </script>
-  <!-- sticky-header / other shared scripts -->
-  <script src="script.js"></script></body>
+</body>
 </html>
