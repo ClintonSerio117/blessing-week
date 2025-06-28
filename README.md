@@ -39,11 +39,11 @@ This workshop is for anyone ready to:
 
 Each lesson is a sacred step in resetting your entire energy system:
 
-* **[Day 1: Energy Field Awareness](blessing_week_day1.html)**
+* **[Day 1: Energy Field Awareness](day1.html)**
     * _Theme: Understanding your personal energy field. You can't clean what you can't see._
-* **[Day 2: Space Clearing](blessing_week_day2.html)**
+* **[Day 2: Space Clearing](day2.html)**
     * _Theme: Cleansing your environment. Your space affects your field more than you realize._
-* **[Day 3: Energy Cord Cutting](blessing_week_day3.html)**
+* **[Day 3: Energy Cord Cutting](day3.html)**
     * _Theme: Releasing energetic attachments. Cut what's draining you to reclaim your energy sovereignty._
 * **[Day 4: Energy Field Clearing](blessing_week_day4.html)**
     * _Theme: Cleansing your personal energy body. A deep scrub of accumulated junk and unwanted patterns._
